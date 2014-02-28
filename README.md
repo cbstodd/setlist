@@ -1,4 +1,4 @@
 #Setlist Application
 
 If you have any questions please contact the developer 
--[Colin Stodd](cbstodd@gmail.com)
+<a href="mailto:cbstodd@gmail.com">~Colin S.</a> 
