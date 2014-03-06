@@ -8,9 +8,14 @@ describe "views/static_pages" do
       page.should have_selector("h1", text: "Setlist")
     end
 
-    it "should have the title 'Setlist | Home'" do 
+    it "should have the base title" do 
       visit '/static_pages/home'
-      page.should have_selector("title", text: "Setlist | Home")
+      page.should have_selector("title", text: "Setlist")
+    end
+
+    it "should have not have a custom page title" do 
+      visit '/static_pages/home'
+      page.should_not have_selector("title", text: "| Home")
     end
   end
 
