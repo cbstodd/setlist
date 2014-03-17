@@ -1,7 +1,16 @@
 Setlist::Application.routes.draw do
+  devise_for :users
+
   root :to => 'static_pages#home'
 
-  match '/signup',  to: 'users#new'
+  devise_scope :user do
+    get '/signup',  to: 'devise/registrations#new'
+    get '/signin',  to: 'devise/sessions#new'
+    get '/logout', to: 'devise/sessions#destroy'
+    get '/edit',    to: 'devise/registrations#edit'
+    get '/cancel',  to: 'devise/registrations#cancel'
+  end
+  
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
