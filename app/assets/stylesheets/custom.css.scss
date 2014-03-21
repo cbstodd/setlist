@@ -6,7 +6,9 @@ $lightGrey: #999;
 $white: #fff;
 $grey: #555;
 $greyDarker: #222;
-$greyLine: #eaeaea;
+$greyLine: #D3D3D3;
+$menuBar: #EEE;
+$salmon: #D9534F;
 
 @mixin box_sizing {
   -webkit-box-sizing: border-box;
@@ -26,6 +28,9 @@ html {
 body {
   padding-top: 60px;
   background-image: url("worn_dots.png");
+  a {
+    color: $salmon;
+  }
 
 }
 
@@ -60,7 +65,7 @@ h1 {
 
 h2 {
   font-size: 1.7em;
-  font-family: DejaVu Sans Mono;
+  font-family: Open Sans, Helvetica, Arial, Sans;
   font-weight: normal;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -80,16 +85,28 @@ p {
   margin-right: 10px;
   font-size: 2em;
   color: $greyDarker;
-  padding-top: 6px;
+  padding-top: 12px;
   font-weight: bold;
   line-height: 1;
   &:hover {
     color: $greyDarker;
     text-decoration: none;
+
   }
 }
 
+#button {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
   
+.navbar {
+  background-color: $menuBar;
+
+}
+
 /* Footer */
 
 footer {
@@ -101,7 +118,7 @@ footer {
     color: $grey;
 
     &:hover {
-    color: $greyDarker;
+    color: $salmon;
     text-decoration: none;
 
     }
@@ -165,7 +182,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 25%;
+  width: auto;
   height: auto;
   margin-bottom: 15px;
 
@@ -182,4 +199,10 @@ input, textarea, select, .uneditable-input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+/* DEVISE */
+
+.remember_me {
+
 }
