@@ -8,7 +8,6 @@ describe "Statuses" do
       before { visit statuses_path }
       it { should have_selector("h1", text: "All Setlists") }
       it { should have_selector("title", text: "| All Setlists") }
-
     end
 
     describe "New Setlist page" do 
@@ -16,7 +15,6 @@ describe "Statuses" do
       it { should have_selector("h1", text: "Post new setlist") }
       it { should have_selector("title", text: "| New Setlist") }
     end
-
 
     describe "Edit Setlist Account" do 
       before { visit signup_path }
