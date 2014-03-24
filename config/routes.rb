@@ -1,22 +1,25 @@
 Setlist::Application.routes.draw do
-  resources :statuses
+  get "profiles/show"
 
+  resources :statuses
 
   devise_for :users
 
   root :to => 'static_pages#home'
 
   devise_scope :user do
-    get '/signup',          to: 'devise/registrations#new'
-    get '/signin',          to: 'devise/sessions#new'
-    get '/logout',          to: 'devise/sessions#destroy'
-    get '/edit_account',    to: 'devise/registrations#edit'
-    get '/cancel',          to: 'devise/registrations#cancel'
+    get '/signup',       to: 'devise/registrations#new'
+    get '/signin',       to: 'devise/sessions#new'
+    get '/logout',       to: 'devise/sessions#destroy'
+    get '/edit_account', to: 'devise/registrations#edit'
+    get '/cancel',       to: 'devise/registrations#cancel'
+    get '/statuses',     to: 'statuses#index'
+    get '/new_status',   to: 'statuses#new'
+    get '/status',       to: 'statuses#show'
+    get '/:id',          to: 'profiles#show'
   end
   
-  match '/statuses',    to: 'statuses#index'
-  match '/new_status',  to: 'statuses#new'
-  match '/status',      to: 'statuses#show'
+
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

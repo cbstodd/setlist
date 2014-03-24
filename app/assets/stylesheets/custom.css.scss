@@ -49,6 +49,10 @@ textarea {
   }
 }
 
+.push {
+  padding: 0px 0px 20px 100px;
+}
+
 /* typeography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -173,7 +177,7 @@ aside {
 
 .gravatar {
   float: left;
-  margin-right: 10px;
+  margin-right: 20px;
 
 }
 
@@ -186,7 +190,9 @@ input, textarea, select, .uneditable-input {
   height: auto;
   margin-bottom: 15px;
 
+
 }
+
 
 #error_explanation {
   color: #f00;
